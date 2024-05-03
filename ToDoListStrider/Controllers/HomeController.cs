@@ -1,32 +1,44 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using ToDoListStrider.Application;
 using ToDoListStrider.Models;
 
 namespace ToDoListStrider.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IToDoService _toDoService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IToDoService toDoService)
         {
-            _logger = logger;
+            _toDoService = toDoService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
+            int userId = HttpContext.Session.GetInt32("UserId") ?? 0;
+            if (userId == 0)
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+            var pendingTasks = await _toDoService.GetPendingToDoItemsByUserId(userId);
+            var completedTasks = await _toDoService.GetCompletedToDoItemsByUserId(userId);
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var viewModel = new DashboardViewModel
+            {
+                PendingToDoItems = pendingTasks,
+                DoneToDoItems = completedTasks,
+                Username = "User", // Replace with actual username retrieval logic
+                PendingCount = pendingTasks.Count, // Update pending tasks count
+                DoneCount = completedTasks.Count // Update completed tasks count
+            };
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return PartialView("_CompletedTasks", viewModel.DoneToDoItems);
+            }
+
+            return View(viewModel);
         }
     }
-}
