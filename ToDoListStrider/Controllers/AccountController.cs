@@ -1,8 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ToDoList.Application;
-using ToDoList.Domain;
-using ToDoList.Models;
-using System.Threading.Tasks;
 using ToDoListStrider.Application;
 using ToDoListStrider.Domain;
 using ToDoListStrider.Models;
