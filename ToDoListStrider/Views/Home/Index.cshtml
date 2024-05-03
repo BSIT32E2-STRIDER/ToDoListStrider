@@ -108,3 +108,16 @@
                 .add-task-section form button:hover {
                     background-color: #218838;
                 }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="dashboard-title">Dashboard</h1>
+
+        <!-- Welcome and Overview Section -->
+        <div class="dashboard-section">
+            <div class="section-title">Welcome, @Model.Username!</div>
+            <div class="section-content">
+                <p>You have <strong>@Model.PendingCount</strong> pending tasks and <strong>@Model.DoneCount</strong> completed tasks.</p>
+            </div>
+        </div>
