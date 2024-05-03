@@ -70,3 +70,19 @@
             a:hover {
                 text-decoration: underline;
             }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form asp-action="Login" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="Username" value="@Model?.Username" required />
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="Password" required />
+            </div>
+            <button type="submit">Login</button>
+        </form>
