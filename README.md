@@ -7,14 +7,14 @@ It's composed of multiple concentric layers interfacing with each other towards 
 
 -Layers-
 
-1. Domain Layer (Core Layer)**: 
+1. Domain Layer (Core Layer): 
 This is the inner-most layer and houses the business logic. It is independent of the other layers. It includes entities, enums, exceptions, interfaces, types and logic specific to the domain layer.
 
-2. Application Layer**: This layer orchestrates the application's activity. It doesn't contain any business logic. It does, however, orchestrate the business objects to perform tasks for the application.
+2. Application Layer: This layer orchestrates the application's activity. It doesn't contain any business logic. It does, however, orchestrate the business objects to perform tasks for the application.
 
-3. Infrastructure Layer**: This layer provides generic technical capabilities that support the layers above it. It provides communication between layers through interfaces. In our case, it's where the in-memory database is implemented.
+3. Infrastructure Layer: This layer provides generic technical capabilities that support the layers above it. It provides communication between layers through interfaces. In our case, it's where the in-memory database is implemented.
 
--In-Memory Database-
+-In_Memory Database-
 
 The application uses an in-memory database as its data store. An in-memory database is a database management system that primarily relies on main memory for computer data storage. 
 It is contrasted with database management systems that employ a disk storage mechanism.In our application, we use it for simplicity and speed, as it allows us to perform CRUD operations without the need for setting up a physical database.
