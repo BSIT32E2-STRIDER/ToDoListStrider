@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ToDoListStrider.Infrastructure.Repositories;
 using ToDoListStrider.Domain;
+using ToDoListStrider.Infrastructure.Repositories;
 
-namespace ToDoList.Application
+namespace ToDoListStrider.Application
 {
     public class ToDoService : IToDoService
     {

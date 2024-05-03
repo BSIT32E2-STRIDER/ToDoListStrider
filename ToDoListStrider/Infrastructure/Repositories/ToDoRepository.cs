@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ToDoListStrider.Domain;
 
-namespace ToDoList.Infrastructure.Repositories
+namespace ToDoListStrider.Infrastructure.Repositories
 {
     public class ToDoRepository : IToDoRepository
     {

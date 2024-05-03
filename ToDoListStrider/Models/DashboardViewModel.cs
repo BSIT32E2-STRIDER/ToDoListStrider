@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ToDoListStrider.Domain;
 
-namespace ToDoList.Models
+namespace ToDoListStrider.Models
 {
     public class DashboardViewModel
     {

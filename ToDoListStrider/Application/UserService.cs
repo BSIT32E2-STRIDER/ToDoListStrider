@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using ToDoListStrider.Domain;
 using ToDoListStrider.Infrastructure.Repositories;
+using ToDoListStrider.Domain;
 
-namespace ToDoList.Application
+namespace ToDoListStrider.Application
 {
     public class UserService : IUserService
     {

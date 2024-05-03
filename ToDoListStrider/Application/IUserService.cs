@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using ToDoListStrider.Domain;
-
-namespace ToDoList.Application
+namespace ToDoListStrider.Application
 {
     public interface IUserService
     {
