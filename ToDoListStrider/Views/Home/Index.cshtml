@@ -121,3 +121,28 @@
                 <p>You have <strong>@Model.PendingCount</strong> pending tasks and <strong>@Model.DoneCount</strong> completed tasks.</p>
             </div>
         </div>
+        <!-- Pending Tasks Section -->
+        <div class="dashboard-section">
+            <div class="section-title">Pending Tasks</div>
+            <div class="section-content">
+                @if (Model.PendingToDoItems != null && Model.PendingToDoItems.Any())
+                {
+                    foreach (var item in Model.PendingToDoItems)
+                    {
+                        <div class="task-item">
+                            <h3>@item.Title</h3>
+                            <p><strong>Due:</strong> @item.DueDate.ToString("MM/dd/yyyy")</p>
+                            <p>@item.Description</p>
+                            <form asp-action="MarkDone" method="post">
+                                <input type="hidden" name="Id" value="@item.Id" />
+                                <button type="submit" class="btn">Mark as Done <i class="fas fa-check"></i></button>
+                            </form>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="empty-message">No pending tasks available.</p>
+                }
+            </div>
+        </div>
