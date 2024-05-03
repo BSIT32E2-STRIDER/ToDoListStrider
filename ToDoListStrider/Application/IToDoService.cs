@@ -1,6 +1,8 @@
-﻿using ToDoListStrider.Domain;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using ToDoListStrider.Domain;
 
-namespace ToDoListStrider.Application
+namespace ToDoList.Application
 {
     public interface IToDoService
     {
