@@ -168,3 +168,19 @@
                 }
             </div>
         </div>
+
+        <!-- Add New Task Section -->
+        <div class="add-task-section">
+            <div class="section-title">Add New Task</div>
+            <div class="section-content">
+                <form asp-action="Add" method="post">
+                    <input type="text" name="Title" placeholder="Title" required />
+                    <input type="text" name="Description" placeholder="Description" required />
+                    <input type="date" name="DueDate" required />
+                    <button type="submit">Add Task <i class="fas fa-plus"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
