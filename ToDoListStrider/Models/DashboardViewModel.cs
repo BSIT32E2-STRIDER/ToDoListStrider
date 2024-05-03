@@ -1,6 +1,7 @@
-﻿using ToDoListStrider.Domain;
+﻿using System.Collections.Generic;
+using ToDoListStrider.Domain;
 
-namespace ToDoListStrider.Models
+namespace ToDoList.Models
 {
     public class DashboardViewModel
     {

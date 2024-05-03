@@ -1,6 +1,7 @@
-﻿using ToDoListStrider.Domain;
+﻿using System.Threading.Tasks;
+using ToDoListStrider.Domain;
 
-namespace ToDoListStrider.Infrastructure.Repositories
+namespace ToDoList.Infrastructure.Repositories
 {
     public interface IUserRepository
     {
@@ -10,5 +11,7 @@ namespace ToDoListStrider.Infrastructure.Repositories
         Task<User> GetUserByUsername(string username);
         int GetMaxUserId();
         Task Add(User user);
+
+
     }
 }

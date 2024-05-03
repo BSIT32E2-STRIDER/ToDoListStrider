@@ -1,6 +1,9 @@
-﻿using ToDoListStrider.Domain;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ToDoListStrider.Domain;
 
-namespace ToDoListStrider.Infrastructure.Repositories
+namespace ToDoList.Infrastructure.Repositories
 {
     public class ToDoRepository : IToDoRepository
     {

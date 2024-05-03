@@ -1,6 +1,8 @@
-﻿using ToDoListStrider.Domain;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using ToDoListStrider.Domain;
 
-namespace ToDoListStrider.Infrastructure.Repositories
+namespace ToDoList.Infrastructure.Repositories
 {
     public interface IToDoRepository
     {
@@ -8,6 +10,6 @@ namespace ToDoListStrider.Infrastructure.Repositories
         Task Update(ToDoItem item);
         Task<List<ToDoItem>> GetByUserId(int userId);
         Task<ToDoItem> GetById(int id);
-        Task<List<ToDoItem>> GetByUserIdAndStatus(int userId, bool isDone);
+        Task<List<ToDoItem>> GetByUserIdAndStatus(int userId, bool isDone); // New method to get tasks by user ID and status
     }
 }

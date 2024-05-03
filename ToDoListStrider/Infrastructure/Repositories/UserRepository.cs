@@ -1,6 +1,9 @@
-﻿using ToDoListStrider.Domain;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ToDoListStrider.Domain;
 
-namespace ToDoListStrider.Infrastructure.Repositories
+namespace ToDoList.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
@@ -8,7 +11,7 @@ namespace ToDoListStrider.Infrastructure.Repositories
 
         public UserRepository()
         {
-            
+            // Initialize the in-memory database with sample users
             _inMemoryDatabase = new List<User>
             {
                 new User
@@ -16,37 +19,37 @@ namespace ToDoListStrider.Infrastructure.Repositories
                     UserId = 1,
                     Username = "user1",
                     Password = "password1"
-                    
+                    // Add any other properties you want to initialize
                 },
                  new User
                 {
                     UserId = 1,
                     Username = "hazel",
                     Password = "sagre"
-                   
+                    // Add any other properties you want to initialize
                 },
                  new User
                 {
                     UserId = 1,
                     Username = "paolo",
                     Password = "deleon"
-                   
+                    // Add any other properties you want to initialize
                 },
                   new User
                 {
                     UserId = 1,
                     Username = "kenjie",
                     Password = "baniqued"
-                    
+                    // Add any other properties you want to initialize
                 },
                 new User
                 {
                     UserId = 2,
                     Username = "kevin",
                     Password = "francisco"
-                    
+                    // Add any other properties you want to initialize
                 }
-                
+                // Add more sample users as needed
             };
         }
 
