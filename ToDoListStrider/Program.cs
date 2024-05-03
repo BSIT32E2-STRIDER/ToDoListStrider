@@ -1,5 +1,5 @@
-using ToDoList.Application;
-using ToDoList.Infrastructure.Repositories;
+using ToDoListStrider.Application;
+using ToDoListStrider.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
