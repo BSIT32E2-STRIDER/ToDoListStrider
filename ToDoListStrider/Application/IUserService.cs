@@ -1,5 +1,5 @@
-﻿using ToDoListStrider.Domain;
-
+﻿using System.Threading.Tasks;
+using ToDoListStrider.Domain;
 namespace ToDoListStrider.Application
 {
     public interface IUserService

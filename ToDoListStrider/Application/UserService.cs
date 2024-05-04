@@ -1,5 +1,6 @@
-﻿using ToDoListStrider.Domain;
+﻿using System.Threading.Tasks;
 using ToDoListStrider.Infrastructure.Repositories;
+using ToDoListStrider.Domain;
 
 namespace ToDoListStrider.Application
 {
@@ -50,4 +51,5 @@ namespace ToDoListStrider.Application
         }
 
     }
+
 }
